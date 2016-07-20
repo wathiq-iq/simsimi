@@ -1,0 +1,24 @@
+return {
+
+	-- Your authorization token from the botfather.
+	bot_api_key = '',
+	-- Your Telegram ID.
+	admin = ,
+	text = [[
+	
+	]],
+     
+	simsimi_key = '',
+	lang = 'ar','en','af','bg','ca','ch','cs','cy','da','de','el','es','eu','fi','fr','he','hi','hr','hu','id','it','ja','kh','ko','lt','ml','ms','nb','nl','pa','ph','pl','pt','ro','rs','ru','sk','sv','ta','te','th','tr','uk','vn','zh',
+	
+	langer = true,
+	
+	errors = {connection = 'Connection error.',results = 'No results found.',argument = 'Invalid argument.',syntax = 'Invalid syntax.',chatter_connection = 'I don\'t feel like talking right now.',chatter_response = 'I don\'t know what to say to that.'},
+
+	plugins = {
+	'simsimi',
+	'help',
+	'about',
+	}
+
+}
