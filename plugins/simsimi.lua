@@ -1,18 +1,3 @@
- -- Put this absolutely at the end, even after greetings.lua.
- --[[
- lang to simsimi 
- lang = {
-        'ar','en','af','bg','ca',
-		'ch','cs','cy','da','de',
-		'el','es','eu','fi','fr',
-		'he','hi','hr','hu','id',
-		'it','ja','kh','ko','lt',
-		'ml','ms','nb','nl','pa',
-		'ph','pl','pt','ro','rs',
-		'ru','sk','sv','ta','te',
-		'th','tr','uk','vn','zh',
-		}, ---- lang = 45
- ]]--
 local aa = "-------------------"
 local simsimi = {} 
 
@@ -64,7 +49,7 @@ function simsimi:action(msg)
 		langer = 'en' -- NO English
 	end
 
-	local url = 'http://api.simsimi.com/request.p?key=' ..self.config.simsimi_key.. '&lc=' ..self.config.lang.. '&ft=0.0&text=' .. URL.escape(input)
+	local url = 'http://api.simsimi.com/request.p?key=' ..self.config.simsimi_key.. '&lc=' ..self.config.lang.. '&ft=1.0&text=' .. URL.escape(input)
 
 	local jstr, res = HTTP.request(url)
 	if res ~= 200 then
@@ -97,24 +82,16 @@ function simsimi:action(msg)
 
 	if not string.match(output, '%p$') then
 		output = output
-	elseif not string.match(output, '%p$') then --'?? ' .. ' ??'
+	elseif not string.match(output, '%p$') then 
 		output = output '' .. ''
 	end
 
 	bindings.sendMessage(self, msg.chat.id, output, true, msg.message_id, false)
---	print(LAZUBOT.db, id)
---	print(msg.from.first_name)
---	print(msg.from.id)
---	print(msg.message_id)
---  print(msg.text)
-    print(aa)
---    print(ww)
---    print(aa)
+        print(aa)
 	print(msg.chat.username or msg.chat.first_name or msg.chat.id)
 	print(msg.text) 
 	print(output)
 	print(aa)
---  print(msg.chat.username or msg.chat.first_name or msg.chat.id msg.text  output)
 
 end
 
