@@ -25,6 +25,14 @@ sh launch.sh
 ## chat with bot
 Feel free to try the bot [via Telegram](http://telegram.me/LAZUBOT) or manually search **@LAZUBOT** in Telegram app.
 
+## Support
+Don't ask me questions noob :p
+send me questions by Telegram [Wathiq](https://telegram.me/iluli)
+Github [New Issue](https://github.com/wathiq-iq/simsimi/issues)
+
+## LICENSE
+A Fork of [Otouto](https://github.com/topkecleon/otouto)
+GNU AFFERO GENERAL PUBLIC LICENSE By Otouto
 
 
 
