@@ -81,7 +81,7 @@ function bindings:editMessageText(chat_id, message_id, text, keyboard, markdown)
 	url = url .. '&disable_web_page_preview=true'
 
 	if keyboard then
-		url = url..'&reply_markup='..keyboard
+		url = url .. '&reply_markup=' .. keyboard
 	end
 
 	return bibdings.sendRequest(url)
@@ -90,7 +90,11 @@ end
 
 function bibdings:editMarkup(chat_id, message_id, reply_markup)
 	
-	local url = BASE_URL .. '/editMessageReplyMarkup?chat_id=' .. chat_id .. '&message_id='..message_id..'&reply_markup='..keyboard
+	local url = BASE_URL .. '/editMessageReplyMarkup?chat_id=' .. chat_id .. '&message_id='..message_id
+	
+	if reply_markup then
+	url = url .. '&reply_markup=' .. reply_markup
+	end
 	
 	return bibdings.sendRequest(url)
 
