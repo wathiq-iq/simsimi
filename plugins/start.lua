@@ -1,16 +1,16 @@
-local about = {}
+local start = {}
 
 local bot = require('bot')
 local bindings = require('bindings')
 
-about.command = ''
-about.doc = ''
+start.command = ''
+start.doc = ''
 
-about.triggers = {
+start.triggers = {
 	''
 }
 
-function about:action(msg)
+function start:action(msg)
 
 	-- Filthy hack, but here is where we'll stop forwarded messages from hitting
 	-- other plugins.
@@ -30,4 +30,4 @@ function about:action(msg)
 
 end
 
-return about
+return start
