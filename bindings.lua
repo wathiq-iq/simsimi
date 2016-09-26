@@ -43,7 +43,7 @@ function bindings:getUpdates(offset)
 
 end
 
-function bindings:sendMessage(chat_id, text, disable_web_page_preview, reply_to_message_id, use_markdown, disable_notification)
+function bindings:sendMessage(chat_id, text, disable_web_page_preview, reply_to_message_id, use_markdown, disable_notification, reply_markup)
 
 	local url = self.BASE_URL .. '/sendMessage?chat_id=' .. chat_id .. '&text=' .. URL.escape(text)
 
@@ -62,9 +62,50 @@ function bindings:sendMessage(chat_id, text, disable_web_page_preview, reply_to_
 	if disable_notification then
 		url = url .. '&disable_notification=true'
 	end
+	if reply_markup then
+		url = url .. '&reply_markup=' .. reply_markup
+	end
 
 	return bindings.sendRequest(url)
 
+end
+
+function bindings:editMessageText(chat_id, message_id, text, keyboard, markdown)
+
+	local url = BASE_URL .. '/editMessageText?chat_id=' .. chat_id .. '&message_id='..message_id..'&text=' .. URL.escape(text)
+
+	if markdown then
+		url = url .. '&parse_mode=Markdown'
+	end
+
+	url = url .. '&disable_web_page_preview=true'
+
+	if keyboard then
+		url = url..'&reply_markup='..keyboard
+	end
+
+	return bibdings.sendRequest(url)
+
+end
+
+function bibdings:editMarkup(chat_id, message_id, reply_markup)
+	
+	local url = BASE_URL .. '/editMessageReplyMarkup?chat_id=' .. chat_id .. '&message_id='..message_id..'&reply_markup='..keyboard
+	
+	return bibdings.sendRequest(url)
+
+end
+
+function bibdings:answerCallbackQuery(callback_query_id, text, show_alert)
+	
+	local url = BASE_URL .. '/answerCallbackQuery?callback_query_id=' .. callback_query_id .. '&text=' .. URL.escape(text)
+	
+	if show_alert then
+		url = url..'&show_alert=true'
+	end
+	
+	return bibdings.sendRequest(url)
+	
 end
 
 function bindings:sendReply(msg, text, use_markdown, disable_notification)
