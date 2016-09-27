@@ -84,11 +84,11 @@ function bindings:editMessageText(chat_id, message_id, text, keyboard, markdown)
 		url = url .. '&reply_markup=' .. keyboard
 	end
 
-	return bibdings.sendRequest(url)
+	return bindings.sendRequest(url)
 
 end
 
-function bibdings:editMarkup(chat_id, message_id, reply_markup)
+function bindings:editMarkup(chat_id, message_id, reply_markup)
 	
 	local url = BASE_URL .. '/editMessageReplyMarkup?chat_id=' .. chat_id .. '&message_id='..message_id
 	
@@ -100,7 +100,7 @@ function bibdings:editMarkup(chat_id, message_id, reply_markup)
 
 end
 
-function bibdings:answerCallbackQuery(callback_query_id, text, show_alert)
+function bindings:answerCallbackQuery(callback_query_id, text, show_alert)
 	
 	local url = BASE_URL .. '/answerCallbackQuery?callback_query_id=' .. callback_query_id .. '&text=' .. URL.escape(text)
 	
@@ -108,7 +108,7 @@ function bibdings:answerCallbackQuery(callback_query_id, text, show_alert)
 		url = url..'&show_alert=true'
 	end
 	
-	return bibdings.sendRequest(url)
+	return bindings.sendRequest(url)
 	
 end
 
