@@ -96,7 +96,7 @@ function bindings:editMarkup(chat_id, message_id, reply_markup)
 	url = url .. '&reply_markup=' .. reply_markup
 	end
 	
-	return bibdings.sendRequest(url)
+	return bindings.sendRequest(url)
 
 end
 
