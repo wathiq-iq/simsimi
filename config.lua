@@ -9,7 +9,7 @@ return {
 	<text hear>
 	]],
         -- Your authorization token Api from the http://developer.simsimi.com/
-	simsimi_key = '',
+	simsimi_key = '39f78034-50d4-47bf-8e0b-99634e089002',
 	-- lang 45 
 	lang = 'ar','en','af','bg','ca','ch','cs','cy','da','de','el','es','eu','fi','fr','he','hi','hr','hu','id','it','ja','kh','ko','lt','ml','ms','nb','nl','pa','ph','pl','pt','ro','rs','ru','sk','sv','ta','te','th','tr','uk','vn','zh',
 	-- true or false
