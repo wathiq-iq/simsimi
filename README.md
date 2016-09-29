@@ -31,8 +31,10 @@ send me questions by Telegram [Wathiq](https://telegram.me/iluli)
 Github [New Issue](https://github.com/wathiq-iq/simsimi/issues)
 
 ## LICENSE
-A Fork of [Otouto](https://github.com/topkecleon/otouto)
-GNU AFFERO GENERAL PUBLIC LICENSE By Otouto
+
+MIT License
+
+Copyright (c) 2016 Wathiq Al-Qajar
 
 
 
